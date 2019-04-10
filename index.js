@@ -96,12 +96,12 @@ module.exports = cors(async (req, res) => {
       tracking_extra = tracking_update.extra
     }
     let { billing_email, order_id } = tracking_extra
-    if (!order_id) {
-      order_id = '730589c9-ee68-44b4-a201-bb38a9468abe'
-    }
-    if (!billing_email) {
-      billing_email = 'adam@uniquelyparticular.com'
-    }
+    // if (!order_id) {
+    //   order_id = '730589c9-ee68-44b4-a201-bb38a9468abe'
+    // }
+    // if (!billing_email) {
+    //   billing_email = 'adam@uniquelyparticular.com'
+    // }
 
     if (order_id) {
       if (billing_email) {
@@ -162,11 +162,7 @@ module.exports = cors(async (req, res) => {
           })
           .catch(error => {
             const jsonError = _toJSON(error)
-            return send(
-              res,
-              jsonError.type === 'StripeSignatureVerificationError' ? 401 : 500,
-              jsonError
-            )
+            return send(res, 500, jsonError)
           })
       } else {
         console.error('missing billing_email')
@@ -182,10 +178,6 @@ module.exports = cors(async (req, res) => {
     }
   } catch (error) {
     const jsonError = _toJSON(error)
-    return send(
-      res,
-      jsonError.type === 'StripeSignatureVerificationError' ? 401 : 500,
-      jsonError
-    )
+    return send(res, 500, jsonError)
   }
 })
