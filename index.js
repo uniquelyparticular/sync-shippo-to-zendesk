@@ -122,7 +122,7 @@ module.exports = cors(async (req, res) => {
               'Shipping Carrier': carrier,
               'Tracking Status': status, //TODO: format case
               'Order ID': order_id,
-              'Tracking Number': `<a href="tracking_number">${tracking_number}</a>`,
+              'Tracking Number': tracking_number,
               'Service Type': service_type,
               'Estimated Delivery': moment(eta).format('MM/DD/YYYY'),
               'Tracking Notes': status_details,
