@@ -7,9 +7,10 @@
     "ZENDESK_INTEGRATION_EMAIL": "@demo-zendesk-integration-email",
     "ZENDESK_INTEGRATION_SECRET": "@demo-zendesk-integration-secret"
   },
+  "routes": [{ "src": "/(.*)", "dest": "/src" }],
   "builds": [
     {
-      "src": "*.js",
+      "src": "src/*.js",
       "use": "@now/node"
     }
   ]
