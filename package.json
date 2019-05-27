@@ -35,10 +35,10 @@
     }
   },
   "dependencies": {
-    "micro": "^9.3.3",
-    "micro-cors": "^0.1.1",
-    "moment-timezone": "^0.5.23",
-    "node-fetch": "^2.3.0"
+    "micro": "9.3.4",
+    "micro-cors": "0.1.1",
+    "moment-timezone": "0.5.25",
+    "node-fetch": "2.6.0"
   },
   "devDependencies": {
     "husky": "2.3.0",
@@ -46,7 +46,7 @@
     "micro-dev": "3.0.0",
     "prettier": "1.17.1",
     "pretty-quick": "1.11.0",
-    "semantic-release": "15.13.12",
+    "semantic-release": "15.13.14",
     "ts-jest": "24.0.2"
   },
   "publishConfig": {
